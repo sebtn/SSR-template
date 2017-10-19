@@ -1,12 +1,15 @@
 .
 ├── README.md
 ├── server
-│   ├── npm-debug.log
+│   ├── build
+│   │   └── bundle.js
 │   ├── package.json
-│   └── src
-│       ├── client
-│       │   └── Components
-│       └── index.js
+│   ├── src
+│   │   ├── client
+│   │   │   └── Components
+│   │   │       └── Home.js
+│   │   └── index.js
+│   └── webpack.server.js
 └── tree.js
 
-4 directories, 5 files
+5 directories, 7 files
