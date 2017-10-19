@@ -1,5 +1,5 @@
 const express = require('express')
-const react = require('react')
+const React = require('react')
 const renderToString = require('react-dom/server').renderToString
 
 const Home = require('./client/Components/Home').default
