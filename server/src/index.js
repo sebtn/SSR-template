@@ -1,8 +1,5 @@
 import express from 'express'
-import React from 'react'
-import { renderToString } from 'react-dom/server'
-
-import Home from './client/Components/Home'
+import renderer from './helpers/renderer'
 
 const app = express()
 
@@ -14,18 +11,7 @@ app.use(express.static('public'))
 
 // Boot app from server
 app.get( '/', (req, res) => {
-  const content = renderToString(<Home />)
-
-  const html = `
-    <html>
-      <head></head>
-      <body>
-        <div id="root">${content}</div>
-      </body>
-      <script src="bundle.js"></script>
-    </html>
-  `
-  res.send(html)
+  res.send(renderer())
 })
 
 app.listen( 3000, () => console.log('Port 3000 is ready for action') )
