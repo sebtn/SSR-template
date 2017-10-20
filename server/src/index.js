@@ -12,6 +12,7 @@ const app = express()
 */
 app.use(express.static('public'))
 
+// Boot app from server
 app.get( '/', (req, res) => {
   const content = renderToString(<Home />)
 
@@ -19,12 +20,11 @@ app.get( '/', (req, res) => {
     <html>
       <head></head>
       <body>
-        <div>${content}</div>
+        <div id="root">${content}</div>
       </body>
       <script src="bundle.js"></script>
     </html>
   `
-
   res.send(html)
 })
 
