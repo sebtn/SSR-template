@@ -4,12 +4,16 @@
 │   ├── build
 │   │   └── bundle.js
 │   ├── package.json
+│   ├── public
+│   │   └── bundle.js
 │   ├── src
 │   │   ├── client
+│   │   │   ├── client.js
 │   │   │   └── Components
 │   │   │       └── Home.js
 │   │   └── index.js
+│   ├── webpack.client.js
 │   └── webpack.server.js
 └── tree.js
 
-5 directories, 7 files
+6 directories, 10 files
