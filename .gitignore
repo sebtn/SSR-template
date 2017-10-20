@@ -1,6 +1,8 @@
 server/node_modules/
 server/build/bundle.js
 
+server/public/bundle.js
+
 server/npm-debug.log/
 server/npm-debug.log
 server/src/npm-debug.log
