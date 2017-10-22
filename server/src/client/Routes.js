@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 
 import Home from './Components/Home'
 
-export default  () => {
+export default () => {
   return (
     <div>
       <Route exact path ="/" component={Home} />
