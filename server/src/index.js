@@ -11,7 +11,7 @@ app.use(express.static('public'))
 
 // Boot app from server
 app.get( '/', (req, res) => {
-  res.send(renderer())
+  res.send(renderer(req))
 })
 
 app.listen( 3000, () => console.log('Port 3000 is ready for action') )

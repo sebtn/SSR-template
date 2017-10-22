@@ -6,3 +6,7 @@ server/public/bundle.js
 
 server/npm-debug.log
 server/src/npm-debug.log
+
+/npm-debug.log/
+/npm-debug.log
+npm-debug.log/
