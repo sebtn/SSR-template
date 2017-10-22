@@ -3,16 +3,22 @@
 ├── server
 │   ├── build
 │   │   └── bundle.js
-│   ├── npm-debug.log
 │   ├── package.json
 │   ├── public
 │   │   └── bundle.js
 │   ├── src
 │   │   ├── client
+│   │   │   ├── actions
+│   │   │   │   └── index.js
 │   │   │   ├── client.js
-│   │   │   └── Components
-│   │   │       └── Home.js
+│   │   │   ├── Components
+│   │   │   │   └── Home.js
+│   │   │   ├── reducers
+│   │   │   │   ├── index.js
+│   │   │   │   └── usersReducer.js
+│   │   │   └── Routes.js
 │   │   ├── helpers
+│   │   │   ├── createStore.js
 │   │   │   └── renderer.js
 │   │   └── index.js
 │   ├── webpack.base.js
@@ -20,4 +26,4 @@
 │   └── webpack.server.js
 └── tree.js
 
-7 directories, 13 files
+9 directories, 17 files
