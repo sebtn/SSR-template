@@ -1,5 +1,6 @@
 // Start point for webpack client in the browser
 // boot the app inside browser 'normal react here'
+import 'babel-polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 // wont work on server, expects hard coded route 

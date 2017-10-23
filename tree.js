@@ -12,7 +12,8 @@
 │   │   │   │   └── index.js
 │   │   │   ├── client.js
 │   │   │   ├── Components
-│   │   │   │   └── Home.js
+│   │   │   │   ├── Home.js
+│   │   │   │   └── UsersList.js
 │   │   │   ├── reducers
 │   │   │   │   ├── index.js
 │   │   │   │   └── usersReducer.js
@@ -26,4 +27,4 @@
 │   └── webpack.server.js
 └── tree.js
 
-9 directories, 17 files
+9 directories, 18 files
