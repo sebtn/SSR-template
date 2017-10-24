@@ -6,7 +6,9 @@ import { Provider } from'react-redux'
 
 import Routes from '../client/Routes'
 
-//tied to 'src/index.js' app.use method
+//Tied to 'src/index.js' app.use method
+// render the react app instantly
+// no concurrency
 export default (req, store) => {
   const content = renderToString(
     <Provider store={store}>
