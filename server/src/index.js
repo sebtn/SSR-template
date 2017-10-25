@@ -28,7 +28,7 @@ app.use('/api', proxy('http://react-ssr-api.herokuapp.com', {
 // load data without rendering Component
 app.get( '*', (req, res) => {
   const store = createStore(req)
-  //tell which routes is assign to which component
+  // tell which routes is assign to which component
   // assign redux store. Action creator passed
   const promises = matchRoutes(Routes, req.path).map(( {route} ) => {
     return route.loadData ? route.loadData(store) : null 
@@ -39,7 +39,10 @@ app.get( '*', (req, res) => {
     //initialize and pass data into store inside renderer
     if(context.notFound) res.status(404)  
     res.send( content )
-  }) 
+  })
+  .catch( () => {
+    res.send('Please do Auth')
+  })
 })
 
 app.listen( 3000, () => console.log('Port 3000 is ready for action') )

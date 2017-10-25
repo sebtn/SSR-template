@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom'
 import HomePage from './Pages/HomePage'
 import NotFoundPage from './Pages/NotFoundPage'
 import UsersListPage, { loadData } from './Pages/UsersListPage'
+import AdminsListPage from './Pages/AdminsListPage'
 import App from './App'
 
 export default [
@@ -18,6 +19,10 @@ export default [
       {
         ...UsersListPage,
         path: '/users',
+      },
+      {
+        ...AdminsListPage,
+        path: '/admins'
       },
       {
         ...NotFoundPage
