@@ -34,8 +34,11 @@ app.get( '*', (req, res) => {
     return route.loadData ? route.loadData(store) : null 
   })
   Promise.all(promises).then( () => {
+    const context = {}
+    const content = renderer(req, store, context) 
     //initialize and pass data into store inside renderer
-    res.send(renderer(req, store))
+    if(context.notFound) res.status(404)  
+    res.send( content )
   }) 
 })
 

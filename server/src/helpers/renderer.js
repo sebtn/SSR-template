@@ -12,10 +12,11 @@ import Routes from '../client/Routes'
 // render the react app instantly
 // no concurrency unless INITIAL_STATE  
 // from getState() is used
-export default (req, store) => {
+// context is a third argument for err detection
+export default (req, store, context) => {
   const content = renderToString(
     <Provider store={store}>
-      <StaticRouter location={req.path} context={{}}>
+      <StaticRouter location={req.path} context={context}>
         {/*<Routes />*/}
         <div>{ renderRoutes(Routes) }</div>
       </StaticRouter>
