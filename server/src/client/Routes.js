@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router-dom'
 
 import Home from './Components/Home'
-import UsersList from './Components/UsersList'
+import UsersList, { loadData } from './Components/UsersList'
 
 // export default () => {
 //   return (
@@ -21,7 +21,8 @@ export default [
     exact: true
   },
   {
+    loadData,
     path: '/users',
-    component: UsersList 
+    component: UsersList
   }
 ]

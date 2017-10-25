@@ -27,8 +27,18 @@ export class UsersList extends Component {
   }
 }
 
+// /connected to the app.use
+const loadData = (store) => {
+  // console.log('Loading data!')
+  return store.dispatch( fetchUsers() )
+}
+
+
+
+
 const mapStateToProps = (state) => { 
   return { users: state.users }
 }
 
-export default connect(mapStateToProps, {fetchUsers})(UsersList)
+export { loadData }
+export default connect(mapStateToProps, { fetchUsers })(UsersList)
