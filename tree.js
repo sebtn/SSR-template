@@ -15,10 +15,12 @@
 │   │   │   ├── Components
 │   │   │   │   └── Header.js
 │   │   │   ├── Pages
+│   │   │   │   ├── AdminsListPage.js
 │   │   │   │   ├── HomePage.js
 │   │   │   │   ├── NotFoundPage.js
 │   │   │   │   └── UsersListPage.js
 │   │   │   ├── reducers
+│   │   │   │   ├── adminsReducer.js
 │   │   │   │   ├── authReducer.js
 │   │   │   │   ├── index.js
 │   │   │   │   └── usersReducer.js
@@ -32,4 +34,4 @@
 │   └── webpack.server.js
 └── tree.js
 
-10 directories, 22 files
+10 directories, 24 files
