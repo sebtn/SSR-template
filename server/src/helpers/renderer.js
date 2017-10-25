@@ -9,7 +9,7 @@ import Routes from '../client/Routes'
 
 //Tied to 'src/index.js' app.use method
 // render the react app instantly
-// no concurrency
+// no concurrency unless INITIAL_STATE  is used
 export default (req, store) => {
   const content = renderToString(
     <Provider store={store}>
@@ -25,6 +25,7 @@ export default (req, store) => {
       <body>
         <div id="root">${content}</div>
       </body>
+      <script>window.INITIAL_STATE=${ JSON.stringify(store.getState()) }</script>
       <script src="bundle.js"></script>
     </html>
   `

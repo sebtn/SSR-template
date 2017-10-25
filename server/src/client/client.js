@@ -15,6 +15,7 @@ import Routes from './Routes'
 import reducers from  './reducers'
 
 
+
 const devExtension = compose( 
   window.devToolsExtension ? 
   window.devToolsExtension() : f => f 
@@ -24,7 +25,11 @@ const createMiddleware = applyMiddleware(
   thunk,
 )(createStore)
 
-const store = createMiddleware(reducers, devExtension)
+const store = createMiddleware(
+  reducers,
+  window.INITIAL_STATE,
+ devExtension,
+)
 
 // 'render' again to set handlers -> hydration
 ReactDOM.hydrate(
