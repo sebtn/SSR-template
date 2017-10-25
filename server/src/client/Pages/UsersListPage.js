@@ -33,9 +33,6 @@ const loadData = (store) => {
   return store.dispatch( fetchUsers() )
 }
 
-
-
-
 const mapStateToProps = (state) => { 
   return { users: state.users }
 }
