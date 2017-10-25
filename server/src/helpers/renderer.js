@@ -8,9 +8,10 @@ import serialize from 'serialize-javascript'
 
 import Routes from '../client/Routes'
 
-//Tied to 'src/index.js' app.use method
+// Tied to 'src/index.js' app.use method
 // render the react app instantly
-// no concurrency unless INITIAL_STATE  is used
+// no concurrency unless INITIAL_STATE  
+// from getState() is used
 export default (req, store) => {
   const content = renderToString(
     <Provider store={store}>
