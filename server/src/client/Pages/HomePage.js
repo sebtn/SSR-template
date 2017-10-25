@@ -13,5 +13,5 @@ const Home = () => {
 }
 
 export default {
-  compoenent: Home,
+  component: Home,
 }
