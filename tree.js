@@ -10,11 +10,15 @@
 │   │   ├── client
 │   │   │   ├── actions
 │   │   │   │   └── index.js
+│   │   │   ├── App.js
 │   │   │   ├── client.js
 │   │   │   ├── Components
-│   │   │   │   ├── Home.js
-│   │   │   │   └── UsersList.js
+│   │   │   │   └── Header.js
+│   │   │   ├── Pages
+│   │   │   │   ├── HomePage.js
+│   │   │   │   └── UsersListPage.js
 │   │   │   ├── reducers
+│   │   │   │   ├── authReducer.js
 │   │   │   │   ├── index.js
 │   │   │   │   └── usersReducer.js
 │   │   │   └── Routes.js
@@ -27,4 +31,4 @@
 │   └── webpack.server.js
 └── tree.js
 
-9 directories, 18 files
+10 directories, 21 files
