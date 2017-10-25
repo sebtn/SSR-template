@@ -31,8 +31,15 @@ app.get( '*', (req, res) => {
   // tell which routes is assign to which component
   // assign redux store. Action creator passed
   const promises = matchRoutes(Routes, req.path).map(( {route} ) => {
-    return route.loadData ? route.loadData(store) : null 
+    return route.loadData ? route.loadData(store) : null
+  }).map( promise => {
+    if(promise) {
+      return new Promise((resolve, reject) => {
+         promise.then(resolve).catch(resolve)
+      })
+    }
   })
+
   Promise.all(promises).then( () => {
     const context = {}
     const content = renderer(req, store, context) 
@@ -40,9 +47,7 @@ app.get( '*', (req, res) => {
     if(context.notFound) res.status(404)  
     res.send( content )
   })
-  .catch( () => {
-    res.send('Please do Auth')
-  })
+
 })
 
 app.listen( 3000, () => console.log('Port 3000 is ready for action') )

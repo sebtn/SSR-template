@@ -10,15 +10,18 @@ export class AdminsListPage extends Component{
 
 renderAdmins = () => {
   const {admins} = this.props
-  return admins.map( admin => {
-    return <li key={admin.id}>{admin.name}</li>
-  })
+  if (admins) {
+    return admins.map( admin => {
+      return <li key={admin.id}>{admin.name}</li>
+    })
+  }
+  return <h4>You must be admin to see this</h4>
 }
 
   render() {
     return(
       <div>
-        <h3>Protectde list of secret admins!</h3>
+        <h3>Protected list of secret admins!</h3>
         <ul>{this.renderAdmins()}</ul>
       </div>
     ) 
@@ -30,6 +33,6 @@ const mapStateToProps = ({ admins }) => {
 }
 
 export default {
-  component: connect(mapStateToProps, { fetchAdmins })(AdminsListPage),
-  loadData: ({ dispatch }) => dispatch( fetchAdmins() )
+  loadData: ({ dispatch }) => dispatch( fetchAdmins() ),
+  component: connect(mapStateToProps, { fetchAdmins })(AdminsListPage)
 }
